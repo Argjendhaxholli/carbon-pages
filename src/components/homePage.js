@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Carousel from '../../node_modules/react-bootstrap/Carousel';
 
 class HomePage extends Component {
     render(){
@@ -33,55 +34,45 @@ class HomePage extends Component {
             
         <main role="main">
 
-            <div id="myCarousel" className="carousel slide" data-ride="carousel">
-                <ol className="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <div className="carousel-inner">
-                    <div className="carousel-item active">
-                        <img src={window.location.origin + '/placeholder.svg'} style={{width:'100%', height:'100%', background:'#777', color:'#777'}} />
-                        <div className="container">
-                            <div className="carousel-caption text-left">
-                                <h1>Example headline.</h1>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                <p><a className="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                    {/* {% include icons/placeholder.svg width="100%" height="100%" background="#777" color="#777" text=" " title=" " %} */}
-                        <div className="container">
-                            <div className="carousel-caption">
-                                <h1>Another example headline.</h1>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                <p><a className="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="carousel-item">
-                    {/* {% include icons/placeholder.svg width="100%" height="100%" background="#777" color="#777" text=" " title=" " %} */}
-                        <div className="container">
-                            <div className="carousel-caption text-right">
-                                <h1>One more for good measure.</h1>
-                                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-                                <p><a className="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Previous</span>
-                </a>
-                <a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="sr-only">Next</span>
-                </a>
-            </div>
+            <Carousel>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://www.tribaeast.com/wp-content/uploads/2017/07/Singapore-1-Altitude-Viewing-Gallery-Sunset-View-800x400.png"
+                    alt="First slide"
+                    />
+                    <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://www.womanthology.co.uk/wp-content/uploads/2016/02/Himilayas-800-x-400.jpg"
+                    alt="Third slide"
+                    />
 
-            <div className="container marketing">
+                    <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                    className="d-block w-100"
+                    src="https://www.sleepzone.ie/uploads/images/PanelImages800x400/TheBurren/General/sleepzone_hostels_burren_800x400_14.jpg"
+                    alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                    <h3>Third slide label</h3>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+
+            <div className="container marketing mt-5">
 
                 <div className="row">
                     <div className="col-lg-4">
